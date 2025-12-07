@@ -1,0 +1,30 @@
+generator client {
+  provider      = "prisma-client"
+  output        = "../generated/prisma"
+  binaryTargets = ["native", "debian-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url = env("DATABASE_URL")
+}
+
+
+model Weather {
+  id            String  @id @map("_id") @default(auto()) @db.ObjectId
+  time          DateTime
+  temperature   Float
+  windspeed     Float
+  windDirection Int
+  isDay         Boolean
+  weatherCode   Int
+  humidity      Int
+}
+
+model User {
+  id       String @id @map("_id") @default(auto()) @db.ObjectId
+  username String @unique
+  password String
+  name     String?
+  role     String
+}

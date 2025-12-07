@@ -1,0 +1,20 @@
+FROM node:20
+
+WORKDIR /app
+
+# Instala só dependências
+COPY package*.json ./
+RUN npm install
+
+# Depois copia o resto do código
+COPY . .
+
+# Copia o Prisma primeiro e gera client
+COPY prisma ./prisma
+RUN npx prisma generate
+
+# Expõe porta
+EXPOSE 3000
+
+# Rodando em dev mode com watch
+CMD ["npm", "run", "start:dev"]

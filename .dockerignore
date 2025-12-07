@@ -1,0 +1,29 @@
+# Node
+node_modules
+dist
+*.log
+
+# Go
+bin
+*.exe
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Git
+.git
+.gitignore
+
+# Misc
+.DS_Store
+.env
+*.tsbuildinfo
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Prisma
+generated/prisma

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.1);
+  }
+}
+
+.mosaic-block {
+  animation: bounce 1.5s infinite;
+}
+
+.mosaic-block:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.mosaic-block:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.mosaic-block:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.mosaic-block:nth-child(4) {
+  animation-delay: 0.1s;
+}
+
+.mosaic-block:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.mosaic-block:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.mosaic-block:nth-child(7) {
+  animation-delay: 0.2s;
+}
+
+.mosaic-block:nth-child(8) {
+  animation-delay: 0.3s;
+}
+
+.mosaic-block:nth-child(9) {
+  animation-delay: 0.4s;
+}
